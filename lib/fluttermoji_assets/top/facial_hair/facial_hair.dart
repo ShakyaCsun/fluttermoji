@@ -1,6 +1,7 @@
 /// SVG strings and generators for facial hair
 class FacialHair {
-  static Map<String, dynamic> facialHairColor = {
+  const FacialHair._();
+  static Map<String, String> facialHairColor = {
     'Auburn': "#A55728",
     'Black': "#2C1B18",
     'Blonde': "#B58143",
@@ -10,13 +11,14 @@ class FacialHair {
     'Platinum': "#ECDCBF",
     'Red': "#C93305",
   };
-  static String? generateFacialHair(
-      {String facialHairType = "Nothing", String fhColor = "Black"}) {
-    String? colorHex = facialHairColor[fhColor];
+  static String? generateFacialHair({
+    String facialHairType = "Nothing",
+    String fhColor = "Black",
+  }) {
+    final String? colorHex = facialHairColor[fhColor];
 
-    Map<String, dynamic> facialHair = {
-      "Nothing": '''        
-        ''',
+    final Map<String, String> facialHair = {
+      "Nothing": '',
       "Full Beard": '''
         <g id="Facial-Hair/Beard-Medium" transform="translate(-28.000000, -8.000000)">
 									<defs>

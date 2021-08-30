@@ -1,6 +1,7 @@
 /// SVG strings and generators for hairstyle
 class HairStyle {
-  static Map<String, dynamic> hairColor = {
+  const HairStyle._();
+  static Map<String, String> hairColor = {
     'Auburn': "#A55728",
     'Black': "#2C1B18",
     'Blonde': "#B58143",
@@ -13,11 +14,13 @@ class HairStyle {
     'SilverGray': '#E8E1E1',
   };
 
-  static String? generateHairStyle(
-      {String hairType = "Eyepatch", String hColor = "Black"}) {
-    String? colorHex = hairColor[hColor];
+  static String? generateHairStyle({
+    String hairType = "Eyepatch",
+    String hColor = "Black",
+  }) {
+    final String? colorHex = hairColor[hColor];
 
-    Map<String, dynamic> hair = {
+    final Map<String, String> hair = {
       'Eyepatch': '''
 <g id="Top" strokeWidth="1" fill-rule="evenodd">
         <defs>
@@ -897,7 +900,7 @@ class HairStyle {
 						</g>
 					</g>
 ''',
-      "I\'m not bald": '''
+      "I'm not bald": '''
 <g id="Top" stroke-width="1" fill-rule="evenodd">
 						<defs>
 							<rect id="react-path-3286" x="0" y="0" width="264" height="280"></rect>

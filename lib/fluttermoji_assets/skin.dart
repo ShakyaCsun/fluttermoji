@@ -1,5 +1,5 @@
 /// SVG strings for skin colours
-const Map<String, dynamic> skin = {
+const Map<String, String> skin = {
   'Tanned': '''
   <g id="Skin/Tanned" mask="url(#mask-6)" fill="#FD9841">
     <g transform="translate(0.000000, 0.000000)" id="Color">

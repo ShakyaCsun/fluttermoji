@@ -1,6 +1,7 @@
 /// SVG strings and generators for Clothes
 class Clothes {
-  static Map<String, dynamic> clotheColor = {
+  const Clothes._();
+  static Map<String, String> clotheColor = {
     "Black": "#262E33",
     "Blue01": "#65C9FF",
     "Blue02": "#5199E4",
@@ -17,11 +18,13 @@ class Clothes {
     "Red": "#FF5C5C",
     "White": "#FFFFFF",
   };
-  static String? generateClothes(
-      {String clotheType = "Hoodie", String clColor = "Black"}) {
-    String? colorHex = clotheColor[clColor];
+  static String? generateClothes({
+    String clotheType = "Hoodie",
+    String clColor = "Black",
+  }) {
+    final String? colorHex = clotheColor[clColor];
 
-    Map<String, dynamic> clothes = {
+    final Map<String, String> clothes = {
       "Blazer + T-Shirt": '''
 <g id="Clothing/Blazer-+-Shirt" transform="translate(0.000000, 170.000000)">
 						<defs>

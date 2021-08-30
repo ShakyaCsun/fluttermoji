@@ -1,5 +1,5 @@
 /// SVG strings for mouths
-Map<String, dynamic> mouth = {
+Map<String, String> mouth = {
   "Concerned": '''
         <g id="Mouth/Concerned" transform="translate(2.000000, 52.000000)">
 							<defs>

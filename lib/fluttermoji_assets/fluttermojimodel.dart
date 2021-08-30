@@ -2,24 +2,26 @@ import 'package:flutter/foundation.dart';
 
 /// Maps attribute keys to the attribute value list
 final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
-  "style": FluttermojiPropertyItem(title: "Style", property: FluttermojiStyle),
-  "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
+  "style": FluttermojiPropertyItem(title: "Style", property: fluttermojiStyle),
+  "topType": FluttermojiPropertyItem(title: "Hair", property: topType),
   "accessoriesType":
-      FluttermojiPropertyItem(title: "Accessory", property: AccessoriesType),
+      FluttermojiPropertyItem(title: "Accessory", property: accessoriesType),
   "hairColor":
-      FluttermojiPropertyItem(title: "Hair\nColor", property: HairColor),
+      FluttermojiPropertyItem(title: "Hair\nColor", property: hairColor),
   "facialHairType":
-      FluttermojiPropertyItem(title: "Facial\nHair", property: FacialHairType),
+      FluttermojiPropertyItem(title: "Facial\nHair", property: facialHairType),
   "facialHairColor": FluttermojiPropertyItem(
-      title: "F-Hair\nColor", property: FacialHairColor),
-  "clotheType": FluttermojiPropertyItem(title: "Outfit", property: ClotheType),
+    title: "F-Hair\nColor",
+    property: facialHairColor,
+  ),
+  "clotheType": FluttermojiPropertyItem(title: "Outfit", property: clotheType),
   "clotheColor":
-      FluttermojiPropertyItem(title: "Outfit\nColor", property: ClotheColor),
-  "eyeType": FluttermojiPropertyItem(title: "Eye", property: EyeType),
+      FluttermojiPropertyItem(title: "Outfit\nColor", property: clotheColor),
+  "eyeType": FluttermojiPropertyItem(title: "Eye", property: eyeType),
   "eyebrowType":
-      FluttermojiPropertyItem(title: "Eyebrow", property: EyebrowType),
-  "mouthType": FluttermojiPropertyItem(title: "Mouth", property: MouthType),
-  "skinColor": FluttermojiPropertyItem(title: "Skin", property: SkinColor),
+      FluttermojiPropertyItem(title: "Eyebrow", property: eyebrowType),
+  "mouthType": FluttermojiPropertyItem(title: "Mouth", property: mouthType),
+  "skinColor": FluttermojiPropertyItem(title: "Skin", property: skinColor),
 };
 
 class ExpandedFluttermojiCardItem {
@@ -27,8 +29,12 @@ class ExpandedFluttermojiCardItem {
   String? key;
   String? iconAsset;
   double iconsize;
-  ExpandedFluttermojiCardItem(
-      {this.iconsize = 0, this.title = "Unnamed", this.key, this.iconAsset});
+  ExpandedFluttermojiCardItem({
+    this.iconsize = 0,
+    this.title = "Unnamed",
+    this.key,
+    this.iconAsset,
+  });
 }
 
 class FluttermojiPropertyItem extends ChangeNotifier {
@@ -62,18 +68,18 @@ const Map<String, int> defaultFluttermojiOptions = {
   'graphicType': 0
 };
 
-const List<String> FluttermojiStyle = [
+const List<String> fluttermojiStyle = [
   'Transparent',
   'Circle',
 ];
 
-const List<String> TopType = [
+const List<String> topType = [
   'Bald',
   'Eyepatch',
   'Hijab',
   'Turban',
   'Hat',
-  'I\'m not bald',
+  "I'm not bald",
   'Flat',
   'from School',
   'Short n waved',
@@ -105,7 +111,7 @@ const List<String> TopType = [
   'Santa Hat w/ ears',
 ];
 
-const List<String> AccessoriesType = [
+const List<String> accessoriesType = [
   'Nothing',
   'PrescriptionGlasses',
   'Another pair of prescriptions',
@@ -115,7 +121,7 @@ const List<String> AccessoriesType = [
   'Kurt',
 ];
 
-const List<String> HairColor = [
+const List<String> hairColor = [
   'Auburn',
   'Black',
   'Brown',
@@ -129,7 +135,7 @@ const List<String> HairColor = [
 ];
 
 //This is the property I skipped on purpose
-const List<String> HatColor = [
+const List<String> hatColor = [
   'Black',
   'Blue01',
   'Blue02',
@@ -147,15 +153,15 @@ const List<String> HatColor = [
   'White',
 ];
 
-const List<String> FacialHairType = [
+const List<String> facialHairType = [
   'Nothing',
   'Full Beard',
   'Beard, Light',
   'Moustache, Fancy',
-  'That 80\'s moustache',
+  "That 80's moustache",
 ];
 
-const List<String> FacialHairColor = [
+const List<String> facialHairColor = [
   'Auburn',
   'Black',
   'Blonde',
@@ -166,7 +172,7 @@ const List<String> FacialHairColor = [
   'Red',
 ];
 
-const List<String> ClotheType = [
+const List<String> clotheType = [
   'Crew Neck Tee',
   'GraphicShirt',
   'Scoop-neck Tee',
@@ -178,7 +184,7 @@ const List<String> ClotheType = [
   'BlazerSweater',
 ];
 
-const List<String> ClotheColor = [
+const List<String> clotheColor = [
   'Blue01',
   'Blue02',
   'PastelYellow',
@@ -197,7 +203,7 @@ const List<String> ClotheColor = [
 ];
 
 //Not implemented
-const List<String> GraphicType = [
+const List<String> graphicType = [
   'Cumbia',
   'Hola',
   'Bat',
@@ -211,7 +217,7 @@ const List<String> GraphicType = [
   'Skull',
 ];
 
-const List<String> EyeType = [
+const List<String> eyeType = [
   'Default',
   'Happy',
   'Squint',
@@ -226,7 +232,7 @@ const List<String> EyeType = [
   'WinkWacky',
 ];
 
-const List<String> EyebrowType = [
+const List<String> eyebrowType = [
   'Default',
   'FlatNatural',
   'Angry',
@@ -241,7 +247,7 @@ const List<String> EyebrowType = [
   'UpDownNatural',
 ];
 
-const List<String> MouthType = [
+const List<String> mouthType = [
   'Concerned',
   'Default',
   'Sad',
@@ -256,7 +262,7 @@ const List<String> MouthType = [
   'Vomit',
 ];
 
-const List<String> SkinColor = [
+const List<String> skinColor = [
   'White',
   'Peach',
   'Black',

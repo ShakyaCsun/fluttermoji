@@ -1,5 +1,5 @@
 /// SVG strings for acessories
-Map<String, dynamic> accessories = {
+Map<String, String> accessories = {
   "Nothing": '''
         <g></g>
         ''',

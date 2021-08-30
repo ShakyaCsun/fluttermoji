@@ -1,5 +1,5 @@
 /// SVG strings for eyes
-Map<String, dynamic> eyes = {
+Map<String, String> eyes = {
   'Close': '''
   <g
         id='Eyes/Closed-😌'
@@ -199,7 +199,7 @@ Map<String, dynamic> eyes = {
         />
       </g>
   ''',
-  'Squint': ''' 					
+  'Squint': '''
   	<g id="Eyes/Squint-😊" transform="translate(0.000000, 8.000000)">
 							<defs>
 								<path d="M14,14.0481187 C23.6099827,14.0481187 28,18.4994466 28,11.5617716 C28,4.62409673 21.7319865,0 14,0 C6.2680135,0 0,4.62409673 0,11.5617716 C0,18.4994466 4.39001726,14.0481187 14,14.0481187 Z" id="react-path-55832"></path>
